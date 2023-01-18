@@ -4,8 +4,8 @@ interface HabitProps {
 
 export function Habit(props: HabitProps) {
   return (
-    <p>
+    <div className='bg-zinc-900 w-10 h-10 text-white rounded m-2 items-center justify-center flex'>
       { props.completed }
-    </p>
-)
+    </div>
+  )
 }
