@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// uuid = cria um id unico e universal
+// @id diz que é a chave primaria deste default
+//Habit será uma tabela no banco
+// após criar rodar comando - npx prisma migrate dev -
+model Habit {
+  id         String   @id @default(uuid())
+  title      String
+  created_at DateTime
+
+  // @@map muda nome da tabela
+  @@map("habits")
+}
