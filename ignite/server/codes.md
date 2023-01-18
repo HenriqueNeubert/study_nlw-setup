@@ -5,3 +5,5 @@
 #### npm run dev
   - roda projeto
 
+#### cors
+  - permite o acesso do front-end ao back end (comunicação)
